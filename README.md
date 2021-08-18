@@ -16,4 +16,4 @@
 
 -> Voting Summary: It will display vote count for all candidates.
 
--> Except Home Page, every page has contains the link of Home page.
+-> Except Home Page, every page contains the link of Home page.
