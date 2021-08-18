@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <center>
+        {% if error %}
+            <p style="color:green"> {{ error }} </p>
+        {% endif %}
+        <h1>Poll Simulator</h1>
+        <a href="/AddCandidate" methods="post">Add Candidate</a>
+        <br/><br/>
+        <a href="/Vote">Vote</a>
+        <br/><br/>
+        <a href="/PollResult">Poll Result</a>
+        <br/><br/>
+        <a href="/ReportResult">Voting Summary</a>
+    </center>
+</body>
+</html>

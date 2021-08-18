@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>Vote</title>
+</head>
+<body>
+    <p align="right"><a href="/Home">Home</a></p>
+    <center>
+        {% if error %}
+        <p style="color:red;"> {{ error }} </p>
+        {% endif %}
+        <h1>Vote</h1>
+        {% if db %}
+        <form method="post">
+            <label>Student ID:</label>
+            <input type="number" name="voterID" size="9"/>
+            <br/><br/>
+            {% for candidate in db.values() %}
+                <input type="radio" name="Candidate" value="{{ candidate }}"/>{{ candidate }}
+                <br/><br/>
+            {% endfor %}
+            <button type="submit" >Vote</button>
+        </form>
+        {% else %}
+            <p>No candidates available for vote</p>
+        {% endif %}
+    </center>
+</body>
+</html>

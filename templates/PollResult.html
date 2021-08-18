@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Poll Result</title>
+</head>
+<body>
+    <p align="right"><a href="/Home">Home</a></p>
+    <center>
+        <h1>Poll Result</h1>
+        {% if winners %}
+            {% for f in first.keys() %}
+                {% for candidate in winners.keys() %}
+                    {% if f==candidate %}
+                        Won: {{ candidate }} ({{ winners[candidate] }})
+                    {% else %}
+                        Lost: {{ candidate }} ({{ winners[candidate] }})
+                    {% endif %}
+                    <br/><br/>
+                {% endfor %}
+            {% endfor %}
+        {% else %}
+            No Winners are found
+        {% endif %}
+    </center>
+</body>
+</html>

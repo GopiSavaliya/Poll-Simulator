@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Add Candidate</title>
+</head>
+<body>
+    <p align="right"><a href="/Home">Home</a></p>
+    <center>
+        {% if error %}
+        <p style="color:red;"> {{ error }} </p>
+        {% endif %}
+        <h1>Add Candidate</h1>
+        <form method="post">
+            <label>Student ID:</label>
+            <input type="number" name="id" size="9"/>
+            <br/><br/>
+            <label>Candidate Name:</label>
+            <input type="text" name="Name"/>
+            <br/><br/>
+            <button type="submit">Add Candidate</button>
+        </form>
+    </center>
+</body>
+</html>

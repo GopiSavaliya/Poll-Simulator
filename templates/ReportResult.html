@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Report Result</title>
+</head>
+<body>
+    <p align="right"><a href="/Home">Home</a></p>
+    <center>
+        <h1>Voting Report</h1>
+        {% if report %}
+            {% for candidate in report.keys() %}
+                {{ candidate }} : {{ report[candidate] }}
+                <br/><br/>
+            {% endfor %}
+        {% else %}
+            No Candidates are found
+        {% endif %}
+    </center>
+</body>
+</html>
